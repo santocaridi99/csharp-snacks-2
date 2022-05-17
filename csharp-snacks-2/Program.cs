@@ -247,4 +247,21 @@ foreach(Tuple<string, int> s in lcoppie)
 }
 
 Console.WriteLine("--------------------------------------------------");
+//formulazione 2
 
+lcoppie = new List<Tuple<string, int>>()
+{
+     new Tuple <string,int>("uno",1),
+    new Tuple <string,int>("due",2),
+    new Tuple <string,int>("quattro",4),
+    new Tuple <string,int>("sette",7),
+    new Tuple <string,int>("diciannove",19),
+};
+
+
+lcoppie.Sort((Tuple<string,int>  t1, Tuple<string, int> t2) => t1.Item1.CompareTo(t2.Item1));
+
+foreach(Tuple<string, int> t in lcoppie)
+{
+    Console.WriteLine (t.Item1);
+}
